@@ -35,9 +35,9 @@ function Comp ({ result }) {
 Meteor.startup(function () {
   const data = () => Users.已关闭的用户()
   render((
-    <Users.SubscriptionComponent name='something' data={data}>
+    <Meteor.SubscriptionComponent name='something' data={data}>
       {Comp}
-    </Users.SubscriptionComponent>
+    </Meteor.SubscriptionComponent>
   ), document.getElementById('app'))
 })
 
