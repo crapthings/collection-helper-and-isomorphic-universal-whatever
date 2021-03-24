@@ -24,14 +24,6 @@ Meteor.startup(function () {
   })
 })
 
-function Comp ({ result }) {
-  return (
-    <div>{result.map((user) => (
-      <div key={user._id}>{user.username}</div>
-    ))}</div>
-  )
-}
-
 Meteor.startup(function () {
   const data = () => Users.已关闭的用户()
   render((
@@ -40,6 +32,14 @@ Meteor.startup(function () {
     </Meteor.SubscriptionComponent>
   ), document.getElementById('app'))
 })
+
+function Comp ({ result }) {
+  return (
+    <div>{result.map((user) => (
+      <div key={user._id}>{user.username}</div>
+    ))}</div>
+  )
+}
 
 function log ({ ctx, space = 2 }) {
   console.log(JSON.stringify(ctx, null, space))
