@@ -24,9 +24,9 @@ Meteor.startup(function () {
   })
 })
 
-function Comp ({ users }) {
+function Comp ({ result }) {
   return (
-    <div>{users.map((user) => (
+    <div>{result.map((user) => (
       <div key={user._id}>{user.username}</div>
     ))}</div>
   )
