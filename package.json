@@ -1,0 +1,19 @@
+{
+  "name": "collection-helper-and-isomorphic-universal-whatever",
+  "private": true,
+  "scripts": {
+    "start": "meteor run"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.11.2",
+    "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "lodash": "^4.17.21",
+    "meteor-node-stubs": "^1.0.1"
+  },
+  "meteor": {
+    "client": "client/main.js",
+    "server": "server/main.js"
+  }
+}
