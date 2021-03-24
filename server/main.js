@@ -14,6 +14,10 @@ app.post('/updateUsefulCollectionWhatever', function (req, res) {
   return res.json(updateUsefulCollectionWhatever(req.body))
 })
 
+Meteor.publish('something', function () {
+  return Users.find()
+})
+
 Meteor.publish('pub-something', function () {
   if (!this.userId) return this.stop()
 

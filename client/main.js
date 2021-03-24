@@ -1,3 +1,5 @@
+import React from 'react'
+import { render } from 'react-dom'
 import axios from 'axios'
 import '/lib/lib'
 
@@ -22,6 +24,26 @@ Meteor.startup(function () {
   })
 })
 
+function Comp ({ users }) {
+  return (
+    <div>{users.map((user) => (
+      <div key={user._id}>{user.username}</div>
+    ))}</div>
+  )
+}
+
+Meteor.startup(function () {
+  render((
+    <Users.SubscriptionComponent>
+      {Comp}
+    </Users.SubscriptionComponent>
+  ), document.getElementById('app'))
+})
+
 function log ({ ctx, space = 2 }) {
   console.log(JSON.stringify(ctx, null, space))
+}
+
+function App () {
+  return <div>app</div>
 }
